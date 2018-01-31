@@ -27,11 +27,12 @@ registerBlockType( 'wpblocks/song-lyrics', {
 	title: __( 'Song Lyrics' ),
 	description: __( 'Get Song Lyrics' ),
 	attributes: blockAttr,
+	category: 'common',
 	edit: Lyrics,
-	save: ( props ) => {
+	save( { props } ) {
 		const lyrics = props.title || '';
 
-		return <p>{ lyrics }</p>;
+		return ( <p>{ lyrics }</p> );
 	},
 } );
 

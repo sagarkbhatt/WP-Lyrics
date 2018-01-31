@@ -45,7 +45,7 @@ const externals = {
 module.exports = {
 	entry: './block/index.jsx',
 	output: {
-		filename: 'block/build/index.js',
+		filename: 'block/build/build.js',
 		path: __dirname,
 	},
 	externals,
@@ -84,5 +84,5 @@ module.exports = {
 		} ),
 		blocksCSSPlugin,
 		editBlocksCSSPlugin,
-	]
+	],
 };
