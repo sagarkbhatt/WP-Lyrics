@@ -29,10 +29,14 @@ registerBlockType( 'wpblocks/song-lyrics', {
 	attributes: blockAttr,
 	category: 'common',
 	edit: Lyrics,
-	save( { props } ) {
-		const lyrics = props.title || '';
+	save: props => {
+		const title = props.attributes.title;
 
-		return ( <p>{ lyrics }</p> );
+		return (
+			<div className={ props.className ? props.className : '' }>
+				<p className="song-lyrics__title" >{ title }</p>
+			</div>
+		);
 	},
 } );
 

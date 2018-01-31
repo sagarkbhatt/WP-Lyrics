@@ -1,4 +1,4 @@
-import { Autocomplete as ReactAutocomplete } from 'react-autocomplete';
+import ReactAutocomplete from 'react-autocomplete';
 import { debounce } from 'lodash';
 
 const { Component } = wp.element;
