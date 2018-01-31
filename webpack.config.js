@@ -5,7 +5,7 @@ const ExtractTextPlugin = require( 'extract-text-webpack-plugin' ); // CSS loade
 const extractConfig = {
 	use: [
 		{
-			loader: 'raw-loader'
+			loader: 'raw-loader',
 		},
 		{
 			loader: 'postcss-loader',
@@ -33,16 +33,32 @@ const blocksCSSPlugin = new ExtractTextPlugin( {
 	filename: './block/build/style.css',
 } );
 
+const externals = {
+	react: 'React',
+	'react-dom': 'ReactDOM',
+	'react-dom/server': 'ReactDOMServer',
+	tinymce: 'tinymce',
+	moment: 'moment',
+	jquery: 'jQuery',
+};
+
 module.exports = {
-	entry: './block',
+	entry: './block/index.jsx',
 	output: {
 		filename: 'block/build/index.js',
 		path: __dirname,
 	},
+	externals,
+	resolve: {
+		modules: [
+			__dirname,
+			'node_modules',
+		],
+	},
 	module: {
 		rules: [
 			{
-				test: /.js?$/,
+				test: /.jsx?$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/,
 			},

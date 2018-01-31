@@ -1,0 +1,10 @@
+.song-lyrics {
+
+	@at-root #{&}__title {
+		font-size: 2rem;
+	}
+
+	@at-root #{&}__data {
+		font-size: 1rem;
+	}
+}
