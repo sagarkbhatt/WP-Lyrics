@@ -1,6 +1,10 @@
 import ReactAutocomplete from 'react-autocomplete';
 import { debounce } from 'lodash';
 
+/**
+ * External dependencies
+ */
+const { __ } = wp.i18n;
 const { Component } = wp.element;
 
 class Lyrics extends Component {
@@ -65,11 +69,21 @@ class Lyrics extends Component {
 					fontSize: '1rem',
 					position: 'fixed',
 					overflow: 'auto',
-					maxHeight: '50%', // TODO: don't cheat, let it flow to the bottom
+					maxHeight: '50%',
+				} }
+				inputProps={ { placeholder: __( 'Type the song you want the lyrics' ),
+					style: {
+						width: '100%',
+						border: 'none',
+						height: '50px',
+						outline: 'none',
+						boxShadow: 'none',
+					},
 				} }
 				value={ this.state.value }
 				onChange={ this.findLyrics }
 				onSelect={ this.onSelect }
+				wrapperStyle={ {} }
 			/>
 		);
 	}
