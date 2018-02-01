@@ -14,12 +14,12 @@ const { registerBlockType } = wp.blocks;
 
 const blockAttr = {
 	content: {
-		source: 'children',
+		type: 'text',
 		selector: '.song-lyrics__content',
 	},
 	title: {
-		source: 'children',
-		selector: '.song-lyrics__title',
+		type: 'text',
+		selector: '.song-lyrics__title pre',
 	},
 };
 

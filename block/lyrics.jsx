@@ -12,8 +12,8 @@ class Lyrics extends Component {
 		super( props );
 
 		this.state = {
-			value: props.attributes.title ? props.attributes.title : '',
-			data: props.attributes.content ? props.attributes.content : '',
+			value: this.props.attributes.title ? this.props.attributes.title : '',
+			data: this.props.attributes.content ? this.props.attributes.content : '',
 			items: [],
 		};
 
