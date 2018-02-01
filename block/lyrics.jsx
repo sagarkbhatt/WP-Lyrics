@@ -51,10 +51,22 @@ class Lyrics extends Component {
 				items={ this.state.items }
 				getItemValue={ item => item.title }
 				renderItem={ ( item, isHighlighted ) => (
-					<div className={ `item ${ isHighlighted ? 'item-highlighted' : '' }` } key={ item.id }>
+					<div style={ { background: isHighlighted ? 'lightgray' : 'white' } } key={ item.id }>
 						{ item.title }
 					</div>
 				) }
+				menuStyle={ {
+					zIndex: 9999999900,
+					cursor: 'pointer',
+					borderRadius: '0px',
+					boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
+					background: 'rgba(255, 255, 255, 0.9)',
+					padding: '2px 0',
+					fontSize: '1rem',
+					position: 'fixed',
+					overflow: 'auto',
+					maxHeight: '50%', // TODO: don't cheat, let it flow to the bottom
+				} }
 				value={ this.state.value }
 				onChange={ this.findLyrics }
 				onSelect={ this.onSelect }
