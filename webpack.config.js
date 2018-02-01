@@ -89,3 +89,14 @@ module.exports = {
 		editBlocksCSSPlugin,
 	],
 };
+
+if ( process.env.NODE_ENV === 'production' ) {
+	module.exports.plugins = ( module.exports.plugins || [] ).concat( [
+		new webpack.optimize.UglifyJsPlugin( {
+			sourceMap: true,
+			compress: {
+				warnings: false,
+			},
+		} ),
+	] );
+}
