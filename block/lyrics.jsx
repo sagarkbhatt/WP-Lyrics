@@ -30,11 +30,7 @@ class Lyrics extends Component {
 		const _this = this;
 		const api = `https://api.lyrics.ovh/suggest/${ term }`;
 		// call to api.
-		fetch( api, { method: 'GET',
-			headers: new Headers( {
-				'Content-Type': 'application/json',
-			} ),
-		} ) // Call the fetch function passing the url of the API as a parameter
+		fetch( api ) // Call the fetch function passing the url of the API as a parameter
 			.then( ( response ) => response.json() )
 			.then( ( response ) => {
 				_this.setState( { items: response.data ? response.data : [] } );
