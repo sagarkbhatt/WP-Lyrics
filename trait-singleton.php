@@ -5,7 +5,7 @@
  * @package WP_Blocks
  */
 
-namespace WP_Blocks\Traits;
+namespace WP_Lyrics\Traits;
 
 /**
  * Trait Singleton

@@ -1,17 +1,8 @@
 {
   "version": "1.0.0",
   "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sagarkbhatt/WP-Blocks.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sagarkbhatt/WP-Blocks/issues"
-  },
-  "homepage": "https://github.com/sagarkbhatt/WP-Blocks#readme",
   "devDependencies": {
     "autoprefixer": "7.2.5",
     "babel-core": "^6.25.0",
