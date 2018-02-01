@@ -36,7 +36,9 @@ registerBlockType( 'wpblocks/song-lyrics', {
 		return (
 			<div className={ props.className ? props.className : '' }>
 				<h3 className="song-lyrics__title">{ title }</h3>
-				<div className="song-lyrics__content"><pre>{ content }</pre></div>
+				<div className="song-lyrics__content">
+					<pre>{ content }</pre>
+				</div>
 			</div>
 		);
 	},

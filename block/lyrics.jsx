@@ -107,7 +107,7 @@ class Lyrics extends Component {
 			) );
 		}
 
-		if ( attributes.content ) {
+		if ( attributes.content && attributes.title ) {
 			retVal.push( (
 				<div className={ this.props.className ? this.props.className : '' }>
 					<h3 className="song-lyrics__title">{ attributes.title }</h3>
