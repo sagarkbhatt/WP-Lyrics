@@ -1,4 +1,4 @@
-import ReactAutocomplete from 'react-autocomplete';
+import Autocomplete from 'react-autocomplete';
 import { debounce } from 'lodash';
 
 /**
@@ -64,13 +64,11 @@ class Lyrics extends Component {
 
 	render() {
 		const attributes = this.props.attributes;
-		const { focus } = this.props;
-
+		const { isSelected } = this.props;
 		let retVal = [];
-
-		if ( focus ) {
+		if ( isSelected ) {
 			retVal.push( (
-				<ReactAutocomplete key={ 'input-autocomplete' }
+				<Autocomplete key={ 'input-autocomplete' }
 					items={ this.state.items }
 					getItemValue={ item => item.title }
 					renderItem={ ( item, isHighlighted ) => (
