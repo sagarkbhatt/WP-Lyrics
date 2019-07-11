@@ -32,7 +32,7 @@
     "dev": "cross-env BABEL_ENV=default webpack --watch"
   },
   "dependencies": {
-    "lodash": "4.17.4",
+    "lodash": "4.17.13",
     "react-autocomplete": "1.7.2"
   }
 }
